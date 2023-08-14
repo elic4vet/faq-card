@@ -1,0 +1,120 @@
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 12px;
+  font-family: "Kumbh Sans", sans-serif;
+
+  /*Colors */
+
+  /*Text*/
+  --dark-desaturated-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+
+  /*Gradient */
+  --gradient: linear-gradient(to right, var(--soft-violet), var(--soft-blue));
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+
+  /* Text */
+  --dark-grayish-blue: hsl(237, 12%, 33%);
+  --very-dark-grayish-blue: hsl(240, 6%, 50%);
+
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--gradient);
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 1000px;
+  background-image: url("./assets/images/bg-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-color: var(--white);
+  border-radius: 15px;
+}
+
+hr {
+  background-color: #dcdcdc;
+  border: none;
+  height: 2px;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/*Accordion*/
+.accordion {
+  background-color: var(--white);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  margin-bottom: 2px;
+}
+
+.active,
+.accordion:hover {
+  background-color: var(--soft-red);
+  color: var(--white);
+}
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-img {
+  display: none;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  padding-left: 70px;
+  padding-right: 70px;
+  border-radius: 15px;
+  align-items: start;
+  text-align: left;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: var(--white);
+  font-size: 13px;
+  margin-right: 6px;
+  margin-left: 3px;
+}
+
+.attribution {
+  font-size: 13px;
+  text-align: center;
+  margin-top: 10px;
+}
