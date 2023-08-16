@@ -10,6 +10,7 @@
   /*Text*/
   --dark-desaturated-blue: hsl(238, 29%, 16%);
   --soft-red: hsl(14, 88%, 65%);
+  --hover-red: hsl(14, 67%, 84%);
 
   /*Gradient */
   --gradient: linear-gradient(to right, var(--soft-violet), var(--soft-blue));
@@ -21,6 +22,10 @@
   --very-dark-grayish-blue: hsl(240, 6%, 50%);
 
   --white: hsl(0, 0%, 100%);
+
+  /* Font */
+  --fw-bold: 700;
+  --fw-normal: 400;
 }
 
 body {
@@ -75,9 +80,9 @@ hr {
 
 .active,
 .accordion:hover {
-  background-color: var(--soft-red);
-  color: var(--white);
+  color: var(--soft-red);
 }
+
 .panel {
   padding: 0 18px;
   background-color: white;
@@ -91,10 +96,6 @@ hr {
   margin-top: 5px;
 }
 
-.arrow-icon:hover {
-  cursor: pointer;
-  color: azure;
-}
 .footer {
   display: flex;
   justify-content: center;
