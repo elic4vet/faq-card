@@ -36,24 +36,27 @@ body {
   min-height: 100vh;
   background: var(--gradient);
   font-family: "Kumbh Sans", sans-serif;
+  text-rendering: optimizeSpeed;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 
 .card {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 1000px;
+  width: 850px;
   background-image: url("./assets/images/bg-pattern-desktop.svg");
+  background-size: 55rem;
+  background-position: top -13rem left -30rem, bottom 0 right 0rem;
   background-repeat: no-repeat;
   background-color: var(--white);
   border-radius: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 hr {
@@ -78,7 +81,10 @@ hr {
   margin-bottom: 2px;
 }
 
-.active,
+.active {
+  color: var(--dark-desaturated-blue);
+  font-weight: var(--fw-bold);
+}
 .accordion:hover {
   color: var(--soft-red);
 }
@@ -96,6 +102,11 @@ hr {
   margin-top: 5px;
 }
 
+.desktop-img {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
 .footer {
   display: flex;
   justify-content: center;
