@@ -39,6 +39,10 @@ body {
   text-rendering: optimizeSpeed;
 }
 
+p {
+  font-size: 13px;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -49,14 +53,43 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 850px;
-  background-image: url("./assets/images/bg-pattern-desktop.svg");
+  height: 450px;
+  background-image: url("/src/assets/images/bg-pattern-desktop.svg");
   background-size: 55rem;
-  background-position: top -13rem left -30rem, bottom 0 right 0rem;
+  background-position: top -9rem left -25rem, bottom 0 right 0rem;
   background-repeat: no-repeat;
   background-color: var(--white);
   border-radius: 15px;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  padding: 0 20px;
+  border-radius: 15px;
+  align-items: start;
+  text-align: left;
+  margin-left: -20px;
+  margin-right: 20px;
+  margin-top: 30px;
+}
+
+.image-wrapper {
+  background: url("/src/assets/images/illustration-woman-online-desktop.svg");
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  background-size: 97%;
+  background-position: -5vw;
+}
+
+.box-img {
+  position: relative;
+  left: -100px;
+  top: 200px;
 }
 
 hr {
@@ -117,17 +150,6 @@ hr {
   display: none;
 }
 
-.main-content {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--white);
-  padding-left: 70px;
-  padding-right: 70px;
-  border-radius: 15px;
-  align-items: start;
-  text-align: left;
-}
-
 .attribution a {
   text-decoration: none;
   color: var(--white);
@@ -140,4 +162,72 @@ hr {
   font-size: 13px;
   text-align: center;
   margin-top: 10px;
+}
+
+@media screen and (max-width: 760px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 600px;
+    background-image: none;
+    background-color: var(--white);
+    border-radius: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-repeat: no-repeat;
+    background-image: url("/src/assets/images/bg-pattern-mobile.svg");
+    background-size: 74%;
+    background-position: 36px 0px;
+    height: 300px;
+    width: 300px;
+    padding-bottom: 30px;
+  }
+
+  .main-content {
+    background-color: var(--white);
+    padding: 0 20px;
+    border-radius: 15px;
+    align-items: start;
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 40px;
+    order: 2;
+  }
+
+  .accordion {
+    margin-bottom: 5px;
+  }
+
+  .image-wrapper {
+    display: none;
+  }
+
+  .desktop-img {
+    display: none;
+  }
+
+  .mobile-img {
+    display: block;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: -140px;
+  }
+
+  .box-img {
+    display: none;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .attribution {
+    font-size: 13px;
+    text-align: center;
+    margin-top: 200px;
+  }
 }
